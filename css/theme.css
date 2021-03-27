@@ -1,0 +1,230 @@
+.address-line {
+  list-style: none;
+  margin-bottom: 15px;
+  position: relative;
+  font-family: "Lato";
+}
+
+.cc-profile-image .a-edit {
+  position: relative;
+}
+
+.cc-profile-image .a-edit:before {
+  content: "";
+  border: 15px solid rgba(55, 140, 63, 0.6);
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  left: 0;
+  -webkit-animation: pulsate 1.6s ease-out;
+  animation: pulsate 1.6s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  z-index: 99;
+}
+
+.cc-profile-image .img-edit {
+  position: relative;
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  padding: 0;
+  margin: 0;
+  border: 15px solid transparent;
+  z-index: 9999;
+  transition: all 0.3s ease-out;
+}
+
+.cc-profile-image .a-edit:hover .img-edit {
+  transform: scale(1.06, 1.06);
+}
+
+.cc-profile-image .a-edit:hover:before {
+  -webkit-animation: none;
+  animation: none;
+}
+
+.timeline {
+  padding-left: 0;
+  list-style: none;
+  position: relative;
+}
+
+.timeline:before {
+  background-color: black;
+  content: "";
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 2px;
+  height: 100%;
+}
+
+.timeline-event {
+  position: relative;
+}
+
+.timeline-event:hover .timeline-event-icon {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: #44bbaa;
+}
+
+.timeline-event:hover .timeline-event-thumbnail {
+  box-shadow: inset 40em 0 0 0 #44bbaa;
+}
+
+.timeline-event-copy {
+  padding: 2em;
+  position: relative;
+  top: -1.875em;
+  left: 4em;
+  width: 100%;
+}
+
+.timeline-event-copy .h3 {
+  font-size: 1.75em;
+}
+
+.timeline-event-copy .h4 {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.timeline-event-copy .strong {
+  font-weight: 700;
+}
+
+.timeline-event-copy .p:not(.timeline-event-thumbnail) {
+  padding-bottom: 1.2em;
+}
+
+.timeline-event-icon {
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #44bbaa;
+  outline: 10px solid #f3f3f3;
+  display: block;
+  margin: 0.5em 0.5em 0.5em -0.5em;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 1em;
+  height: 1em;
+}
+
+.timeline-event-thumbnail {
+  -moz-transition: box-shadow 0.5s ease-in 0.1s;
+  -o-transition: box-shadow 0.5s ease-in 0.1s;
+  -webkit-transition: box-shadow 0.5s ease-in;
+  -webkit-transition-delay: 0.1s;
+  -webkit-transition: box-shadow 0.5s ease-in 0.1s;
+  transition: box-shadow 0.5s ease-in 0.1s;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: black;
+  box-shadow: inset 0 0 0 0em #44bbaa;
+  display: inline-block;
+  margin-bottom: 1.2em;
+  padding: 0.25em 1em 0.2em 1em;
+}
+
+.card {
+  border: 0;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 25px 0px rgb(0 0 0 / 20%);
+}
+
+.card-edit {
+  width: 75%;
+}
+
+.card .card-body {
+  min-height: 190px;
+  width: 133%;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.card-body-edit {
+  min-height: 302px;
+  padding-top: 33%;
+}
+.title {
+  font-weight: 700;
+}
+.h4 {
+  font-size: 1.714em;
+  line-height: 1.45em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 10000;
+}
+#status {
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -50px 0 0 -50px;
+}
+.preloader {
+  height: 40px;
+  width: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+#status,
+.preloader {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+.cc-experience .cc-experience-header {
+  padding-top: 60px;
+  padding-right: 0;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.bg-primary {
+  background-color: #44bbaa !important;
+}
+.h5 {
+  font-size: 1.57em;
+  line-height: 1.4em;
+  margin-bottom: 15px;
+}
+.h5 {
+  margin-bottom: 0;
+}
+.h5 {
+  margin: 0;
+}
