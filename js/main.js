@@ -41,6 +41,7 @@ jQuery(document).ready(function ($) {
 });
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
+const zooms = document.querySelectorAll(".zoom");
 
 const appearOptions = {
   threshold: 0,
@@ -68,4 +69,8 @@ faders.forEach((fader) => {
 
 sliders.forEach((slider) => {
   appearOnScroll.observe(slider);
+});
+
+zooms.forEach((zoom) => {
+  appearOnScroll.observe(zoom);
 });
