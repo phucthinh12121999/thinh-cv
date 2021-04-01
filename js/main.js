@@ -42,6 +42,8 @@ jQuery(document).ready(function ($) {
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
 const zooms = document.querySelectorAll(".zoom");
+const zoomHeadersTitle = document.querySelectorAll(".zoom-header-title");
+const zoomHeaderSubTitle = document.querySelectorAll(".zoom-header-subtitle");
 
 const appearOptions = {
   threshold: 0,
@@ -73,4 +75,12 @@ sliders.forEach((slider) => {
 
 zooms.forEach((zoom) => {
   appearOnScroll.observe(zoom);
+});
+
+zoomHeadersTitle.forEach((zoomHeaderTitle) => {
+  appearOnScroll.observe(zoomHeaderTitle);
+});
+
+zoomHeaderSubTitle.forEach((zoomHeaderSubTitle) => {
+  appearOnScroll.observe(zoomHeaderSubTitle);
 });

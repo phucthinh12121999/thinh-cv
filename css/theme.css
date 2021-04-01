@@ -39,6 +39,24 @@
 .zoom.appear {
   transform: scale(1.06, 1.06);
 }
+.zoom-header-title {
+  z-index: 9999;
+  padding: 50px;
+  transition: all 1s ease-out;
+  margin: 0 auto;
+}
+.zoom-header-title.appear {
+  transform: scale(1.06, 1.06);
+}
+.zoom-header-subtitle {
+  z-index: 9999;
+  padding: 50px;
+  transition: all 1.45s ease-out;
+  margin: 0 auto;
+}
+.zoom-header-subtitle.appear {
+  transform: scale(1.06, 1.06);
+}
 
 .cc-profile-image .img-edit {
   position: relative;
