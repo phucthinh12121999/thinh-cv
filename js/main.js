@@ -14,6 +14,15 @@ jQuery(document).ready(function ($) {
       overflow: "visible",
     });
   });
+
+  $(document).ready(function () {
+    $("#headerwrap").mouseover(function () {
+      $(this).find(".img-holder").css("transform", "scale(1.2)");
+    });
+    $("#headerwrap").mouseout(function () {
+      $(this).find(".img-holder").css("transform", "scale(1)");
+    });
+  });
   // Smooth scroll for the menu and links with .scrollto classes
   $(".smothscroll").on("click", function (e) {
     e.preventDefault();
@@ -38,6 +47,13 @@ jQuery(document).ready(function ($) {
   $(".carousel").carousel({
     interval: 3500,
   });
+
+  $("#pop").on("click", function () {
+    $(".imagepreview").attr("src", $(this).find("img").attr("src"));
+    $("#imagemodal").modal("show");
+  });
+
+  $("#carouselIndicators").children().prop("disabled", true);
 });
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");

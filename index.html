@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Nguyen Phuc Thinh's CV</title>
@@ -8,7 +9,8 @@
   <meta content="" name="description">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700"
+    rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
   <link href="./src/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,28 +24,154 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
   <link href="./css/theme.css" rel="stylesheet">
+  <style type="text/css">
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 17%;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 74%;
+      margin-top: -8%;
+    }
+
+    /* Caption of Modal Image */
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+
+    /* Add Animation */
+    .modal-content,
+    #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      margin-top: 5%;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .card .card-body {
+        width: auto;
+      }
+
+      .card-body-edit {
+        min-height: 171px;
+        padding-top: 0%;
+      }
+    }
+  </style>
 </head>
 
 <body data-spy="scroll" data-offset="64" data-target="#section-topbar">
   <div id="preloader">
     <div id="status">
 
-        <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-        </div>
+      <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+      </div>
 
     </div>
-</div>
+  </div>
   <div id="section-topbar">
     <div id="topbar-inner">
       <div class="container">
         <div class="row">
           <div class="dropdown">
             <ul id="nav" class="nav">
-              <li class="menu-item"><a class="smothscroll" href="#about" title="About"><i class="fa fa-user"></i></a></li>
-              <li class="menu-item"><a class="smothscroll" href="#skill" title="Skill"><i class="fa fa-signal"></i></a></li>
-              <li class="menu-item"><a class="smothscroll" href="#education" title="Education"><i class="fa fa-file-text-o"></i></a></li>
-              <li class="menu-item"><a class="smothscroll" href="#experience" title="Experience"><i class="fa fa-bar-chart-o"></i></a></li>
-              <li class="menu-item"><a class="smothscroll" href="#work" title="Works"><i class="fa fa-briefcase"></i></a></li>
+              <li class="menu-item"><a class="smothscroll" href="#about" title="About"><i class="fa fa-user"></i></a>
+              </li>
+              <li class="menu-item"><a class="smothscroll" href="#skill" title="Skill"><i class="fa fa-signal"></i></a>
+              </li>
+              <li class="menu-item"><a class="smothscroll" href="#education" title="Education"><i
+                    class="fa fa-file-text-o"></i></a></li>
+              <li class="menu-item"><a class="smothscroll" href="#experience" title="Experience"><i
+                    class="fa fa-bar-chart-o"></i></a></li>
+              <li class="menu-item"><a class="smothscroll" href="#work" title="Works"><i
+                    class="fa fa-briefcase"></i></a></li>
             </ul>
             <!--/ uL#nav -->
           </div>
@@ -63,7 +191,7 @@
 
   <div id="headerwrap">
     <div class="container">
-      <div class="row centered" >
+      <div class="row centered">
         <div class="col-lg-12 fade-in">
           <h1 class="zoom-header-title">Nguyen Phuc Thinh</h1>
           <h2 class="zoom-header-subtitle" style="color: #ffff">A Front-end Developer</h2>
@@ -84,22 +212,32 @@
 
           <div class="col-lg-2 col-lg-offset-1">
             <h5>ABOUT ME</h5>
-            <div class="cc-profile-image zoom" ><a class="a-edit" href="#"><img class="img-edit" src="img/profile.jpg" alt="Image"/></a></div>
+            <div class="cc-profile-image zoom"><a class="a-edit" href="#"><img class="img-edit" src="img/profile.jpg"
+                  alt="Image" /></a></div>
           </div>
           <div class="col-lg-6">
-            <p>I'm Nguyen Phuc Thinh, a front-end developer. I have currently finished my Capstone project at FPT University. I worked on some projects mostly with Java, NodeJs technology (back-end), and pure HTML, CSS, JavaScript, React.js technology (front-end). I am most confident in Java and NodeJS, but I want to focus on doing front-end using React.js so I want to become a front-end developer. I am considered myself a team-player because I like to help others, learn more experience through the working process, and tend to work well within the group. I hope I can use all the things I learned from the university to good use for the job. I am always eager to learn new things and I have good self-learning skills. </p>
+            <p>I'm Nguyen Phuc Thinh, a front-end developer. I have currently finished my Capstone project at FPT
+              University. I worked on some projects mostly with Java, NodeJs technology (back-end), and pure HTML, CSS,
+              JavaScript, React.js technology (front-end). I am most confident in Java and NodeJS, but I want to focus
+              on doing front-end using React.js so I want to become a front-end developer. I am considered myself a
+              team-player because I like to help others, learn more experience through the working process, and tend to
+              work well within the group. I hope I can use all the things I learned from the university to good use for
+              the job. I am always eager to learn new things and I have good self-learning skills. </p>
           </div>
-          <div class="col-lg-3"  style="margin-top: -4%;">
+          <div class="col-lg-3" style="margin-top: -4%;">
             <p><a href="#"><i class="icon-file"></i></a>
-                <h5>CONTACT INFO</h5>
-                <address>
-                    <ul class="address-line" style="padding-left: 0px;">
-                        <li style="padding-bottom: 1%;"><i class="fa fa-map-marker"></i>Ngo Duc Ke Street. Ward 12. Binh Thanh District. Ho Chi Minh City</li>
-                        <li style="padding-bottom: 1%;"><i class="fa fa-phone"></i>+84 977.130.680</li>
-                        <li style="padding-bottom: 1%;"><i class="fa fa-envelope"></i><a href="mailto:phucthinh12121999@gmail.com">phucthinh12121999@gmail.com</a></li>
-                        <li style="padding-bottom: 1%;"><i class="fa fa-globe"></i> <a href="https://phucthinh12121999.github.io/thinh-cv/">phucthinh12121999.github.io/thinh-cv/</a></li>
-                    </ul>
-                </address>
+            <h5>CONTACT INFO</h5>
+            <address>
+              <ul class="address-line" style="padding-left: 0px;">
+                <li style="padding-bottom: 1%;"><i class="fa fa-map-marker"></i>Ngo Duc Ke Street. Ward 12. Binh Thanh
+                  District. Ho Chi Minh City</li>
+                <li style="padding-bottom: 1%;"><i class="fa fa-phone"></i>+84 977.130.680</li>
+                <li style="padding-bottom: 1%;"><i class="fa fa-envelope"></i><a
+                    href="mailto:phucthinh12121999@gmail.com">phucthinh12121999@gmail.com</a></li>
+                <li style="padding-bottom: 1%;"><i class="fa fa-globe"></i> <a
+                    href="https://phucthinh12121999.github.io/thinh-cv/">phucthinh12121999.github.io/thinh-cv/</a></li>
+              </ul>
+            </address>
             </p>
           </div>
 
@@ -114,34 +252,34 @@
     <!--EDUCATION DESCRIPTION -->
     <div class="container desc">
       <div class="card">
-      <div class="row fade-in" >
-        <div class="col-lg-6 col-md-12">
-          <div class="card-body">
-            <div class="h4 mt-0 title">Skill</div>
-            <div class="row">
-              <div class="col-sm-4"><strong class="text-uppercase">•	Programming Languages: </strong></div>
-              <div class="col-sm-8">Java, JavaScript, Python.</div>
+        <div class="row fade-in">
+          <div class="col-lg-6 col-md-12">
+            <div class="card-body">
+              <div class="h4 mt-0 title">Skill</div>
+              <div class="row">
+                <div class="col-sm-4"><strong class="text-uppercase">• Programming Languages: </strong></div>
+                <div class="col-sm-8">Java, JavaScript, Python.</div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-sm-4"><strong class="text-uppercase">• Frameworks/Libraries: </strong></div>
+                <div class="col-sm-8">Node Js, React.js, SpringBoot, JPA, Android. </div>
+              </div>
             </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">•	Frameworks/Libraries: </strong></div>
-              <div class="col-sm-8">Node Js, React.js, SpringBoot, JPA, Android. </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="card-body">
+              <div class="h4 mt-0 title">&nbsp;</div>
+              <div class="row">
+                <div class="col-sm-4"><strong class="text-uppercase">• Database management systems: </strong></div>
+                <div class="col-sm-8">MS SQL Server, PostgreSQL, MongoDB. </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-sm-4"><strong class="text-uppercase">• Tools:</strong></div>
+                <div class="col-sm-8">Git. </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="card-body">
-            <div class="h4 mt-0 title">&nbsp;</div>
-            <div class="row">
-              <div class="col-sm-4"><strong class="text-uppercase">•	Database management systems:  </strong></div>
-              <div class="col-sm-8">MS SQL Server, PostgreSQL, MongoDB. </div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">•	Tools:</strong></div>
-              <div class="col-sm-8">Git. </div>
-            </div>
-          </div>
-        </div>
-      </div>
       </div>
       <br>
       <hr>
@@ -164,12 +302,14 @@
                 <p class="timeline-event-thumbnail p" style="color: azure;">November 2017 - Present</p>
                 <h3 class="h3">SOFTWARE ENGINEERING</h3>
                 <h4 class="h4">FPT UNIVERSITY HO CHI MINH</h4>
-                <p class="p"><strong class="strong">•	Expected graduation: </strong> 2021
-                  <br><strong class="strong">•	Relevant Coursework:  </strong>Website Design, Web Page Programming, OOP Programming, Database Management.</p>
+                <p class="p"><strong class="strong">• Expected graduation: </strong> 2021
+                  <br><strong class="strong">• Relevant Coursework: </strong>Website Design, Web Page Programming, OOP
+                  Programming, Database Management.
+                </p>
               </div>
             </li>
           </ul>
-          </div>
+        </div>
       </div>
       <br>
       <hr>
@@ -178,33 +318,36 @@
   </section>
 
   <section id="experience" name="experience">
-  <!--WORK DESCRIPTION -->
-  <div class="container desc">
-    <div class="row">
+    <!--WORK DESCRIPTION -->
+    <div class="container desc">
+      <div class="row">
 
-      <div class="col-lg-2 col-lg-offset-1 slide-in from-left">
-        <h5>EXPERIENCE</h5>
+        <div class="col-lg-2 col-lg-offset-1 slide-in from-left">
+          <h5>EXPERIENCE</h5>
+        </div>
+        <div class="col-lg-6 slide-in from-right">
+          <ul class="timeline">
+            <li class="timeline-event">
+              <label class="timeline-event-icon"></label>
+              <div class="timeline-event-copy">
+                <p class="timeline-event-thumbnail p" style="color: azure;">September 2019 - December 2019</p>
+                <h3 class="h3">SOFTWARE ENGINEERING INTERN</h3>
+                <h4 class="h4">KNOREX VIETNAM</h4>
+                <p class="p">• Developed and maintained XPO – a cross-channel marketing cloud platform in KNOREX
+                  company.
+                  <br>• Write test cases and unit testing functions using NodeJS with Mocha and Chai frameworks and
+                  Python with pytest.
+                  <br>• Support some tasks for the system’s API functions with NodeJS.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="col-lg-6 slide-in from-right">
-        <ul class="timeline">
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail p" style="color: azure;">September 2019 - December 2019</p>
-              <h3 class="h3">SOFTWARE ENGINEERING INTERN</h3>
-              <h4 class="h4">KNOREX VIETNAM</h4>
-              <p class="p">•	Developed and maintained XPO – a cross-channel marketing cloud platform in KNOREX company.
-                <br>•	Write test cases and unit testing functions using NodeJS with Mocha and Chai frameworks and Python with pytest.
-              <br>•	Support some tasks for the system’s API functions with NodeJS.  </p>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <!--/.row -->
+      <br>
+      <hr>
     </div>
-    <!--/.row -->
-    <br>
-    <hr>
-  </div>
   </section>
   <!--/.container -->
   <section id="work" name="work">
@@ -212,67 +355,140 @@
     <div class="container desc">
       <div class="row">
         <div class="col-lg-2 col-lg-offset-1">
-          <h5>PROJECTS</h5>
+          <h5>TEAM PROJECTS</h5>
         </div>
         <div class="card card-edit fade-in">
-        <div class="col-lg-4 bg-primary slide-in from-left">
-          <div class="card-body-edit cc-experience-header">
-            <p>January 2020 - April 2020</p>
-            <div class="h5">Cleaning service app project</div>
+          <div class="col-lg-4 bg-primary slide-in from-left">
+            <div class="card-body-edit cc-experience-header">
+              <p>January 2020 - April 2020</p>
+              <div class="h5">Cleaning service app project</div>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-6">
-          <div class="card-body slide-in from-right">
-          <p>
-            <more>   
-              •	Description: This is the project for users to order cleaning services in the service’s list by phone and the system will send the order to a cleaner and they will come and do the services which are the user requested.
-              <br/>
-              •	Team size: 4<br/>
-                 •	Responsibilities: Design app’s UI and implementation database, back-end APIs, android.
-            <br/>  •	Technologies: java, Figma (for designing UI), MongoDB, NodeJS, SQL Server, React.js, android.
-            <br/> •	 <strong><a href="https://www.figma.com/file/ktO0ryQpyNCk7NtTSb35eT/HCI?node-id=0%3A1">Figma's design</a></strong>
-            </more>
-          </p>
+          <div class="col-lg-6">
+            <div class="card-body slide-in from-right">
+              <p>
+                <more>
+                  • Description: This is the project for users to order cleaning services in the service’s list by phone
+                  and the system will send the order to a cleaner and they will come and do the services which are the
+                  user requested.
+                  <br />
+                  • Team size: 4<br />
+                  • Responsibilities: Design app’s UI and implementation database, back-end APIs, android.
+                  <br /> • Technologies: java, Figma (for designing UI), MongoDB, NodeJS, SQL Server, React.js, android.
+                  <br /> • <strong><a href="https://www.figma.com/file/ktO0ryQpyNCk7NtTSb35eT/HCI?node-id=0%3A1">Figma's
+                      design</a></strong>
+                </more>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-2 col-lg-offset-1">
-        <h5></h5>
-      </div>
-      <div class="card card-edit fade-in">
-        <div class="col-lg-4 bg-primary slide-in from-left">
-          <div class="card-body-edit cc-experience-header" style="min-height: 330px;" data-aos="fade-right">
-            <p>September 2020 - December 2020</p>
-            <div class="h5">Vehicle Tracking and Management System for Total Vietnam (Capstone Project) </div>
-          </div>
+        <div class="col-lg-2 col-lg-offset-1">
+          <h5></h5>
         </div>
+        <div class="card card-edit fade-in">
+          <div class="col-lg-4 bg-primary slide-in from-left">
+            <div class="card-body-edit cc-experience-header" data-aos="fade-right">
+              <p>September 2020 - December 2020</p>
+              <div class="h5">Vehicle Tracking and Management System for Total Vietnam (Capstone Project) </div>
+            </div>
+          </div>
 
-        <div class="col-lg-6">
-          <div class="card-body slide-in from-right">
-          <p>
-            <more>   
-              •	Description: The system uses an OBC device, which is installed in the vehicle, to track the vehicle’s route and activities through the internet or 3G/4G and then identify if the vehicle causes action which is considered as a violation based on Total Vietnam’s violation rules.
-              <br/>
-              •	Team size: 5<br/>
-                 •	Responsibilities: Writing product documentation, design, and implementation front end for system’s web application using Primefaces framework, API’s management functions using java.
-            <br/>  •	Technologies: java, Primefaces, MySQL, gRPC, Google Maps API, SpringBoot.
-            </more>
-          </p>
+          <div class="col-lg-6">
+            <div class="card-body slide-in from-right">
+              <p>
+                <more>
+                  • Description: The system uses an OBC device, which is installed in the vehicle, to track the
+                  vehicle’s route and activities through the internet or 3G/4G and then identify if the vehicle causes
+                  action which is considered as a violation based on Total Vietnam’s violation rules.
+                  <br />
+                  • Team size: 5<br />
+                  • Responsibilities: Writing product documentation, design, and implementation front end for system’s
+                  web application using Primefaces framework, API’s management functions using java.
+                  <br /> • Technologies: java, Primefaces, MySQL, gRPC, Google Maps API, SpringBoot.
+                </more>
+              </p>
+            </div>
+
+          </div>
+          <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <img class="d-block w-100" id="myImg" src="./img/projectVehicle1.png" alt="First slide">
+              </div>
+              <div class="item">
+                <img class="d-block w-100" id="myImg2" src="./img/projectVehicle2.png" alt="Second slide">
+              </div>
+              <div class="item">
+                <img class="d-block w-100" id="myImg3" src="./img/projectVehicle3.png" alt="Third slide">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
       </div>
       <!--/.row -->
       <br>
       <br>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
     </div>
+
     <!--/.container -->
   </section>
 
 
   <!-- JavaScript Libraries -->
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var img2 = document.getElementById("myImg2");
+    var img3 = document.getElementById("myImg3");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    var carouselIndicators = document.getElementById("carouselIndicators");
+    img.onclick = function () {
+      carouselIndicators.style.opacity = 0.4;
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    img2.onclick = function () {
+      carouselIndicators.style.opacity = 0.4;
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    img3.onclick = function () {
+      carouselIndicators.style.opacity = 0.4;
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      carouselIndicators.style.opacity = 1;
+      modal.style.display = "none";
+    }
+  </script>
+
   <script src="./src/jquery/jquery.min.js"></script>
   <script src="./src/bootstrap/js/bootstrap.min.js"></script>
   <script src="./src/php-mail-form/validate.js"></script>
@@ -283,4 +499,5 @@
   <script src="js/main.js"></script>
   <!-- <script src="js/plugins.js"></script> -->
 </body>
+
 </html>
