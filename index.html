@@ -22,8 +22,9 @@
   <link href="./src/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+
   <link href="./css/theme.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <style type="text/css">
     #myImg {
       border-radius: 5px;
@@ -133,17 +134,6 @@
         width: 100%;
       }
     }
-
-    @media (max-width: 1200px) {
-      .card .card-body {
-        width: auto;
-      }
-
-      .card-body-edit {
-        min-height: 171px;
-        padding-top: 0%;
-      }
-    }
   </style>
 </head>
 
@@ -155,6 +145,11 @@
       </div>
 
     </div>
+  </div>
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
   </div>
   <div id="section-topbar">
     <div id="topbar-inner">
@@ -252,11 +247,11 @@
     <!--EDUCATION DESCRIPTION -->
     <div class="container desc">
       <div class="card">
-<<<<<<< HEAD
         <div class="row fade-in">
+          <div class="h4 title" style="    margin: 30px;">Skill</div>
           <div class="col-lg-6 col-md-12">
             <div class="card-body">
-              <div class="h4 mt-0 title">Skill</div>
+
               <div class="row">
                 <div class="col-sm-4"><strong class="text-uppercase">• Programming Languages: </strong></div>
                 <div class="col-sm-8">Java, JavaScript, Python.</div>
@@ -265,26 +260,15 @@
                 <div class="col-sm-4"><strong class="text-uppercase">• Frameworks/Libraries: </strong></div>
                 <div class="col-sm-8">Node Js, React.js, SpringBoot, JPA, Android. </div>
               </div>
-=======
-      <div class="row fade-in" >
-        <div class="col-lg-6 col-md-12">
-          <div class="card-body">
-            <div class="h4 mt-0 title">Skill</div>
-            <div class="row">
-              <div class="col-sm-4"><strong class="text-uppercase">•	Programming Languages: </strong></div>
-              <div class="col-sm-8">Java, JavaScript.</div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">•	Frameworks/Libraries: </strong></div>
-              <div class="col-sm-8">Node Js, React, JPA, Android. </div>
->>>>>>> 7637c2d49d4c7f5c876b5caf0f15095233156bba
+
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="card-body">
-              <div class="h4 mt-0 title">&nbsp;</div>
+              <!-- <div class="h4 mt-0 title">&nbsp;</div> -->
               <div class="row">
-                <div class="col-sm-4"><strong class="text-uppercase">• Database management systems: </strong></div>
+                <div class="col-sm-4"><strong class="text-uppercase">• Database management systems: </strong>
+                </div>
                 <div class="col-sm-8">MS SQL Server, PostgreSQL, MongoDB. </div>
               </div>
               <div class="row mt-3">
@@ -293,12 +277,10 @@
               </div>
             </div>
           </div>
+          <br>
+          <hr>
         </div>
-      </div>
-      <br>
-      <hr>
-    </div>
-    <!--/.container -->
+        <!--/.container -->
   </section>
 
   <section id="education" name="education">
@@ -449,11 +431,7 @@
       <!--/.row -->
       <br>
       <br>
-      <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-      </div>
+
     </div>
 
     <!--/.container -->
