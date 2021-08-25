@@ -61,10 +61,12 @@
 .cc-profile-image .img-edit {
   position: relative;
   border-radius: 50%;
-  height: 180px;
-  width: 180px;
+  height: 125%;
+  width: 125%;
   padding: 0;
   margin: 0;
+  margin-left: -25%;
+  margin-top: -15%;
   border: 15px solid transparent;
   z-index: 9999;
   transition: all 0.3s ease-out;
