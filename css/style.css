@@ -414,6 +414,107 @@ sm {
   background-color: grey;
 }
 
+.btn-edit {
+  text-align: center;
+}
+
+/* .btn-edit h3 {
+  font-size: 35px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin-bottom: 29px;
+} */
+
+.btn-edit {
+  width: 400px;
+  display: grid;
+}
+
+.btn-edit a {
+  width: 70%;
+  height: 99px;
+  line-height: 99px;
+  color: #7b9f35;
+  border: 1px solid #7b9f35;
+  position: relative;
+}
+
+.btn-edit a:hover {
+  border: 1px solid transparent;
+}
+
+.btn-edit a img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-edit a span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.btn-edit a span:after,
+.btn-edit a span:before {
+  position: absolute;
+  content: "";
+  background-color: #30ab33;
+  transition: all 0.25s;
+}
+
+.bottomRight:before,
+.topLeft:before {
+  width: 3px;
+  height: 100%;
+}
+
+.bottomRight:after,
+.topLeft:after {
+  width: 100%;
+  height: 3px;
+}
+
+.topLeft:before {
+  bottom: -100%;
+  left: 0;
+}
+
+.topLeft:after {
+  left: -100%;
+  top: 0;
+}
+
+.bottomRight:before {
+  top: -100%;
+  right: 0;
+}
+
+.bottomRight:after {
+  right: -100%;
+  bottom: 0;
+}
+
+.btn-edit a:hover .topLeft:before {
+  bottom: 0;
+}
+
+.btn-edit a:hover .topLeft:after {
+  left: 0;
+}
+
+.btn-edit a:hover .bottomRight:before {
+  top: 0;
+}
+
+.btn-edit a:hover .bottomRight:after {
+  right: 0;
+}
+
 .footer-credit {
   text-align: center;
   padding-bottom: 30px;
